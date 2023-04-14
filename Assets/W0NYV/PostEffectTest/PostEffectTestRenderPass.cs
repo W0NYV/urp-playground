@@ -85,6 +85,8 @@ public class PostEffectTestRenderPass : ScriptableRenderPass
             ? _afterPostProcessTexture.Identifier()
             : _cameraColorTarget;
 
+        Debug.Log(source.GetType());
+
         // コマンドバッファを作成
         var cmd = CommandBufferPool.Get(RenderPassName);
         cmd.Clear();

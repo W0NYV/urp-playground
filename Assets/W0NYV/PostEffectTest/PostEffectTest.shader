@@ -40,7 +40,7 @@ Shader "Hidden/PostEffectTest"
                 UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(IN);
                 half4 col = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, IN.uv);
                 //col.rgb *= _TintColor.rgb;
-                col.rgb = half3(1,1,0);
+                col.rgb = 1.0 - col.rgb;
                 return col;
             }
             ENDHLSL
